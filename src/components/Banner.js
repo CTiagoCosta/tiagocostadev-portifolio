@@ -4,6 +4,10 @@ import headerImg from "../assets/img/developer-dark.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { HashLink } from 'react-router-hash-link';
+import {
+  BrowserRouter as Router
+} from "react-router-dom";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -48,6 +52,7 @@ export const Banner = () => {
   }
 
   return (
+    <Router>
     <section className="banner" id="home">
       <Container>
         <Row className="aligh-items-center">
@@ -62,7 +67,9 @@ export const Banner = () => {
                 Agora atuo como Desenvolvedor Pleno na Empresa PSG Tecnologia, onde trabalho na equipe de Front-End e desenvolvo em ReactJS, PHP com ScriptCase, Java, com alguns banco de dados como MySql e SQL Server, já atuei como
                 PJ em vários projetos em diversas áreas.
         </p>
-                  <button onClick={() => console.log('connect')}>Vamos nos conectar<ArrowRightCircle size={25} /></button>
+              <HashLink to='#connect' style={{textDecoration: "none"}}>
+                <button className="vvd"><span>Vamos nos conectar ?<ArrowRightCircle size={25} /></span></button>
+              </HashLink>
               </div>}
             </TrackVisibility>
           </Col>
@@ -77,5 +84,6 @@ export const Banner = () => {
         </Row>
       </Container>
     </section>
+    </Router>
   )
 }

@@ -27,7 +27,7 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText("Carregando...");
     console.log(setButtonText);
-    let response = await fetch("http://lwww.tiagocostadev.com.br/contact", {
+    let response = await fetch("http://www.tiagocostadev.com.br/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

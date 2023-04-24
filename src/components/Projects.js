@@ -105,7 +105,7 @@ export const Projects = () => {
                       <Nav.Link eventKey="second">Sobre o Dev</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Contatos Profissionais</Nav.Link>
+                      <Nav.Link eventKey="third">Profissional</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -124,8 +124,8 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                        <p style={{display: "flex", textAlign: "justify"}}>
-                           <img style={{maxHeight: "280px", margin: "0px 25px 0px 0px"}} src={photo} alt="MySQL"/>
+                        <p style={{display: "block"}}>
+                           <img style={{maxHeight: "480px", maxWidth:"360px", margin: "0px 25px 20px 0px"}} src={photo} alt="MySQL"/> <br></br>
                              Meu nome é Carlos Tiago Silva Cotsa, tenho 36 anos e sou um desenvolvedor web front-end. Posso tornar o site mais interativo com animação na webe com muitos recursos.
                             Formado no Instituto de Ensinos Superiores da Amazônia. Trabalhei com várias linguagens de programação desde o início da carreira como Delphi 3, JAVA, JavaScript, ReactJS, PHP dentre outras.
                             Agora atuo como Desenvolvedor Pleno na Empresa PSG Tecnologia, onde trabalho na equipe de Front-End e desenvolvo em ReactJS, PHP com ScriptCase, Java, com alguns banco de dados como MySql e SQL Server, já atuei como

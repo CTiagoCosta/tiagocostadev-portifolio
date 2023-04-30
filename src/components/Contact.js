@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import emailjs from '@emailjs/browser';
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -12,6 +13,7 @@ export const Contact = () => {
     phone: '',
     message: ''
   }
+  
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState('Enviar');
   const [status, setStatus] = useState({});
@@ -23,7 +25,21 @@ export const Contact = () => {
       })
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setButtonText("Carregando...");
+    emailjs.sendForm('service_pp1nskm', 'template_uv582z7', formInitialDetails.current, 'GQU8R1sT9ZCfHtsrs')
+      .then((result) => {
+        setButtonText("Enviado");
+        setFormDetails(formInitialDetails);
+        setStatus({ succes: true, message: 'Mensagem enviada com sucesso.'});
+      }, (error) => {
+        setButtonText("Cancelado");
+          setStatus({ succes: false, message: 'Algo deu errado, tente novamente mais tarde.'});
+      });
+  };
+
+  /* const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Carregando...");
     console.log(setButtonText);
@@ -43,7 +59,7 @@ export const Contact = () => {
     } else {
       setStatus({ succes: false, message: 'Algo deu errado, tente novamente mais tarde.'});
     }
-  };
+  }; */
 
   return (
     <section className="contact" id="connect">
@@ -61,22 +77,22 @@ export const Contact = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <h2>Entrar em contato</h2>
-                <form onSubmit={handleSubmit}>
+                <form ref={formInitialDetails} onSubmit={handleSubmit}>
                   <Row>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="text" value={formDetails.firstName} placeholder="Nome" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
+                      <input type="text" name="firstName" value={formDetails.firstName} placeholder="Nome" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="text" value={formDetails.lastName} placeholder="Sobrenome" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
+                      <input type="text" name="lastName" value={formDetails.lastName} placeholder="Sobrenome" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="email" value={formDetails.email} placeholder="Endereço de Email" onChange={(e) => onFormUpdate('email', e.target.value)} />
+                      <input type="email" name="email" value={formDetails.email} placeholder="Endereço de Email" onChange={(e) => onFormUpdate('email', e.target.value)} />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="tel" value={formDetails.phone} placeholder="Número de telefone" onChange={(e) => onFormUpdate('phone', e.target.value)}/>
+                      <input type="tel" name="phone" value={formDetails.phone} placeholder="Número de telefone" onChange={(e) => onFormUpdate('phone', e.target.value)}/>
                     </Col>
                     <Col size={12} className="px-1">
-                      <textarea rows="6" value={formDetails.message} placeholder="Mensagem" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
+                      <textarea rows="6" name="message" value={formDetails.message} placeholder="Mensagem" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
                       <button type="submit"><span>{buttonText}</span></button>
                     </Col>
                     {

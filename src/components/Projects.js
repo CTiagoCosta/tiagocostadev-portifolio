@@ -7,6 +7,8 @@ import projImg3 from "../assets/img/projetosistemachamado.jpg";
 import projImg4 from "../assets/img/projtecnorte.jpg";
 import projImg5 from "../assets/img/projdpu.jpg";
 import projImg6 from "../assets/img/projcovid.jpg";
+import projImg7 from "../assets/img/projsaaf.png";
+import projImg8 from "../assets/img/projMemorial.png";
 import redegit from "../assets/img/github.png";
 import redelinkedin from "../assets/img/linkedin.png";
 import redegmail from "../assets/img/gmail.png";
@@ -55,6 +57,18 @@ export const Projects = () => {
       imgUrl: projImg6,
       url: 'https://github.com/CTiagoCosta/projeto-Covid',
       title: 'Projeto Covid'
+    },
+    {
+      description: "Projeto de um sistema de afastamentos para servidores.",
+      imgUrl: projImg7,
+      url: 'https://github.com/CTiagoCosta/projeto-Covid',
+      title: 'Projeto SAAF'
+    },
+    {
+      description: "Projeto para homenagear seus familiares.",
+      imgUrl: projImg8,
+      url: 'https://israelandreo.netlify.app/',
+      title: 'Projeto Memorial'
     },
   ];
 
@@ -124,13 +138,15 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                        <p style={{display: "block"}}>
-                           <img style={{maxHeight: "480px", maxWidth:"360px", margin: "0px 25px 20px 0px"}} src={photo} alt="MySQL"/> <br></br>
-                             Meu nome é Carlos Tiago Silva Cotsa, tenho 36 anos e sou um desenvolvedor web front-end. Posso tornar o site mais interativo com animação na webe com muitos recursos.
-                            Formado no Instituto de Ensinos Superiores da Amazônia. Trabalhei com várias linguagens de programação desde o início da carreira como Delphi 3, JAVA, JavaScript, ReactJS, PHP dentre outras.
-                            Agora atuo como Desenvolvedor Pleno na Empresa PSG Tecnologia, onde trabalho na equipe de Front-End e desenvolvo em ReactJS, PHP com ScriptCase, Java, com alguns banco de dados como MySql e SQL Server, já atuei como
-                            PJ em vários projetos em diversas áreas.</p>  
-                      <div style={{justifyContent: "center", display: "flex"}}>
+                        <p style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+                           <img style={{maxHeight: "480px", maxWidth:"360px", margin: "0px 25px 20px 0px"}} src={photo} alt="Tiago Costa"/> <br></br>
+                            
+                              Formado em Técnico em informática pela Escola Técnica Estadual do Pará atuei na área por mais de 10 anos em várias empresas como técnico em informática e na minha última atuação fiz parte da equipe de suporte técnico da Secretaria de Estado de Educação do Pará, onde adquiri grande experiência em sistemas operacionais Windows e Linux, atuando de forma exemplar e sendo convidado pela Diretora do Departamento a compor a equipe de desenvolvimento.
+                              Formado em Sistemas de Informação pelo Instituto de Estudos Superiores da Amazônia atuei como desenvolvedor Nível 1 e 2 pela empresa Montreal Informática na Secretaria de Estado de Educação no setor Ditec com desenvolvimento em Java, SQL, JavaScript e PHP (Zend2), atuei em vários projetos de desenvolvimento pela secretaria, adquiri habilidades em soluções para serviços públicos, participei de eventos pela instituição, como por exemplo: Oficineiro do Seminário Políticas e Estratégias de Educação Ambiental para Redução de Impactos na Produção de Resíduos Sólidos.
+                              Atuo como desenvolvedor em projetos com JavaScript, React, Angular, PHP com ScriptCase e TypeScript como PJ e Líder técnico da Inovvati Tecnologia no projeto do Detran - MS.
+                              <br></br>Gosto de novos desafios e estou sempre disposto a aprender e compartilhar conhecimento.</p>    
+                            
+                        <div style={{justifyContent: "center", display: "flex"}}>
                         <a href="https://drive.google.com/file/d/1rr2jF8VfAQ6NEUgQznPK9Yr-Ef0CeXFo/view?usp=share_link" target="_blank" rel="noopener noreferrer" download>
                           <button style={
                                 {

@@ -147,7 +147,7 @@ export const Projects = () => {
                               <br></br>Gosto de novos desafios e estou sempre disposto a aprender e compartilhar conhecimento.</p>    
                             
                         <div style={{justifyContent: "center", display: "flex"}}>
-                        <a href="https://drive.google.com/file/d/1rr2jF8VfAQ6NEUgQznPK9Yr-Ef0CeXFo/view?usp=share_link" target="_blank" rel="noopener noreferrer" download>
+                        <a href="https://drive.google.com/file/d/1x5C5NQF7LSfsyRh71R9TKo-XMPE_0qhi/view?usp=sharing" target="_blank" rel="noopener noreferrer" download>
                           <button style={
                                 {
                                   color: "#FFF",

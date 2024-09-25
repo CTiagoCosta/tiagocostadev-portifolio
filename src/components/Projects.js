@@ -138,8 +138,8 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                        <p style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
-                           <img style={{maxHeight: "480px", maxWidth:"360px", margin: "0px 25px 20px 0px"}} src={photo} alt="Tiago Costa"/> <br></br>
+                        <p style={{display: "flex", flexDirection: "column", alignItems: "center", margin: "20px"}}>
+                           <img style={{maxHeight: "480px", maxWidth:"360px", borderRadius: "15px", margin: "0px 25px 20px 0px"}} src={photo} alt="Tiago Costa"/> <br></br>
                             
                               Formado em Técnico em informática pela Escola Técnica Estadual do Pará atuei na área por mais de 10 anos em várias empresas como técnico em informática e na minha última atuação fiz parte da equipe de suporte técnico da Secretaria de Estado de Educação do Pará, onde adquiri grande experiência em sistemas operacionais Windows e Linux, atuando de forma exemplar e sendo convidado pela Diretora do Departamento a compor a equipe de desenvolvimento.
                               Formado em Sistemas de Informação pelo Instituto de Estudos Superiores da Amazônia atuei como desenvolvedor Nível 1 e 2 pela empresa Montreal Informática na Secretaria de Estado de Educação no setor Ditec com desenvolvimento em Java, SQL, JavaScript e PHP (Zend2), atuei em vários projetos de desenvolvimento pela secretaria, adquiri habilidades em soluções para serviços públicos, participei de eventos pela instituição, como por exemplo: Oficineiro do Seminário Políticas e Estratégias de Educação Ambiental para Redução de Impactos na Produção de Resíduos Sólidos.
